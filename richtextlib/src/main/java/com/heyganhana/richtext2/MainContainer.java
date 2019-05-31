@@ -1,13 +1,11 @@
-package com.heyganhana.richtext;
+package com.heyganhana.richtext2;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.service.autofill.CustomDescription;
 import android.support.annotation.Nullable;
-import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -15,13 +13,7 @@ import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.BounceInterpolator;
-import android.view.animation.LinearInterpolator;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -34,8 +26,6 @@ import com.bumptech.glide.request.target.Target;
 
 import java.io.File;
 
-import static android.text.Html.TO_HTML_PARAGRAPH_LINES_INDIVIDUAL;
-
 /**
  * @author zhangdi
  * @date 19-5-28 下午4:48
@@ -46,7 +36,7 @@ public class MainContainer extends LinearLayout implements View.OnFocusChangeLis
 
     private CustomEditText currentEditText;
     //private LinearLayout mContainer;
-    private LinearLayout.LayoutParams linearParams_PARENT;
+    private LayoutParams linearParams_PARENT;
 
     private int defaultParentTopMargin = 5;
     private int defaultParentBottomMargin = 5;
@@ -68,7 +58,7 @@ public class MainContainer extends LinearLayout implements View.OnFocusChangeLis
     }
 
     private void initUI(Context context){
-        linearParams_PARENT = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+        linearParams_PARENT = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT);
         linearParams_PARENT.gravity = Gravity.CENTER_HORIZONTAL;
         linearParams_PARENT.topMargin = defaultParentTopMargin;
         linearParams_PARENT.bottomMargin = defaultParentBottomMargin;
@@ -89,7 +79,7 @@ public class MainContainer extends LinearLayout implements View.OnFocusChangeLis
 
     private CustomEditText createEditText(Context context){
         CustomEditText newEditText = new CustomEditText(context);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
+        LayoutParams params = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
         newEditText.setLayoutParams(params);
         newEditText.setBackground(null);
         newEditText.requestFocus();
@@ -104,7 +94,7 @@ public class MainContainer extends LinearLayout implements View.OnFocusChangeLis
 
     private ImageView createImage(Context context){
         ImageView newImageView = new ImageView(context);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
         params.gravity = Gravity.CENTER;
         newImageView.setLayoutParams(params);
 

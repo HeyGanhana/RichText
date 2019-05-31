@@ -1,4 +1,4 @@
-package com.heyganhana.richtext;
+package com.heyganhana.richtext2;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest{
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.heyganhana.richtext.test", appContext.getPackageName());
+        assertEquals("com.heyganhana.richtext2.test", appContext.getPackageName());
     }
 }

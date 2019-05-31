@@ -1,15 +1,15 @@
 package com.heyganhana.richtext;
 
 import android.app.Activity;
-import android.app.Instrumentation;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+
+import com.heyganhana.richtext2.RichText;
 
 public class MainActivity extends Activity implements View.OnKeyListener{
     Button addImage;

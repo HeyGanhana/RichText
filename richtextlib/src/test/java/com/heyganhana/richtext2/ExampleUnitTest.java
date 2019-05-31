@@ -1,4 +1,4 @@
-package com.heyganhana.richtext;
+package com.heyganhana.richtext2;
 
 import org.junit.Test;
 

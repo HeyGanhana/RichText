@@ -7,12 +7,12 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.heyganhana.richtext.RichText
+    <com.heyganhana.richtext2.RichText
         android:id="@+id/rich_text"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginBottom="50dp"
-        ></com.heyganhana.richtext.RichText>
+        ></com.heyganhana.richtext2.RichText>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
